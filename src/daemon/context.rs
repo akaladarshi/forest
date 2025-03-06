@@ -73,7 +73,7 @@ impl AppContext {
         // only when the callback is created (snapshot download starts)
         {
             let mut tracker = snapshot_progress_tracker.write();
-            *tracker = Some(SnapshotProgressTracker::default());
+            *tracker = Some(SnapshotProgressTracker::new());
         }
 
         Some(Arc::new(move |msg: String| {

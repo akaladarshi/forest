@@ -25,7 +25,7 @@
 //!     let mut reader = tokio::io::BufReader::new(data.as_bytes());
 //!     let len = 0; // Compute total read length or find of way to estimate it
 //!     // We just need to wrap our reader and use the wrapped version
-//!     let reader_wp = tokio::io::BufReader::new(WithProgress::wrap_async_read("reading", reader, len));
+//!     let reader_wp = tokio::io::BufReader::new(WithProgress::wrap_sync_read_with_callback("reading", reader, len, None));
 //!     let mut stream = reader_wp.lines();
 //!     while let Some(line) = stream.next_line().await.unwrap() {
 //!         // Do something with the line
