@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0, MIT
 
 pub mod ext;
+mod methods;
 
 use crate::shim::actors::Policy;
 use crate::shim::actors::convert::*;
